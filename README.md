@@ -1,5 +1,5 @@
-# sync-tagged-playlist - VIDEO ONLY
-Sync video playback for tagged playlist
+# BSN.Content sync-tagged-playlist - VIDEO FILES ONLY
+Synchronised video playback for tagged playlist
 
 This plugin and presentation combo will allow the user to play a specific tagged playlist in sync across multiple Brightsign players.
 
