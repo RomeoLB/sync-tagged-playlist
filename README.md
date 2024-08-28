@@ -29,9 +29,20 @@ This plugin and presentation combo will allow the user to play a specific tagged
 
 <img width="980" alt="image" src="https://github.com/user-attachments/assets/113ff22d-43bb-4892-88f3-98be0ea928fe">
  
-10. In the presentation Library
+10. In the presentation Library (Presentation > Library), locate the recently uploaded presentation and open it
 
 <img width="1123" alt="image" src="https://github.com/user-attachments/assets/55cb890b-c2aa-4465-91f7-ab29670615ee">
+
+11. Select the "Feed-container" state, go to State Properties > List Content, then select "Tagged playlist", then select from the list the Tagged Playlist that you have specified in step 6 for the "playlist_name" user variable.
+
+<img width="957" alt="image" src="https://github.com/user-attachments/assets/ac1fa381-eca0-4e38-9a0e-fadb8033254b">
+
+12. Save the presentation and pubish it to a BSN.Content player group
+
+Note: 
+ - Both Master and Slave(s) players should be assigned to that same group for synchronised video playback.
+ - Multiple Masters/Leaders players from different sites/locations can be specified via the "master_serials" user Variable in the following format "D7E8A0001986:D7E8A0001985:D7E8A0001984" where each player serial number (1 for each master/leader) is separated by the ":" charater.
+
 
 
 
