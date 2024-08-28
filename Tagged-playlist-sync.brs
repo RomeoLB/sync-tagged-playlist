@@ -1,4 +1,4 @@
-'28/08/24 - RLB - Plugin to sync tagged playlist playback
+'28/08/24 - RLB - Plugin for sync tagged playlist playback
 'SyncTaggedPlaylist - plugin name
 
 Function SyncTaggedPlaylist_Initialize(msgPort As Object, userVariables As Object, bsp as Object)
@@ -236,7 +236,7 @@ Function HandlePluginUDPEvent(origMsg as Object, m as Object) as boolean
 	print "UDP Message Received in plugin - "; origMsg
 
 	if origMsg = "check" then
-		m.CheckDownloadFeed("eb5fe6c6-7154-4000-ac5d-2babc51ef000")
+		'm.CheckDownloadFeed("eb5fe6c6-7154-4000-ac5d-2babc51ef000")
 	end if
 
 End Function
@@ -438,7 +438,6 @@ Sub SyncParam()
 
 		' print ""
 		' print "SyncParam - entry: "
-		' print "m.currentFileName: "; m.currentFileName
 		' print "feedfilename: "; feedfilename
 		' print "m.targetFeedID: "; m.targetFeedID
 		' print "type(m.syncManagerEvent): "; type(m.syncManagerEvent)
@@ -567,65 +566,4 @@ Function CheckCardForMediaFiles(feed as String) As Object
 	end if
 	
 	return retval
-End Function
-
-
-
-
-Function DebugStuff()
-
-	'deletedirectory("sd:/feedPool")
-
-	' BrightScript Debugger> ?m.bsp.liveDataFeeds
-	' eb5fe6c6-7154-4000-ac5d-2babc51ef000: <Component: roAssociativeArray>
-
-	' BrightScript Debugger> ?m.bsp.liveDataFeeds["eb5fe6c6-7154-4000-ac5d-2babc51ef000"]
-
-	' BrightScript Debugger> ?m.bsp.liveDataFeeds["eb5fe6c6-7154-4000-ac5d-2babc51ef000"].articles
-	' https://bsncloud.s3.amazonaws.com/Demo/79f0a1a4508001f309b00d99e74b6d27
-	' https://bsncloud.s3.amazonaws.com/Demo/fbff3d36c031710dfc7dd4caef8cf9e8
-	' https://bsncloud.s3.amazonaws.com/Demo/8d9b62391afc5149f120b314be7e0e5e
-	' https://bsncloud.s3.amazonaws.com/Demo/d1503f95ccc3e7a8f400388961756877
-	' https://bsncloud.s3.amazonaws.com/Demo/48639565f3af999c3f543376809f8607
-	' https://bsncloud.s3.amazonaws.com/Demo/113779f132efde8d6d488fa034b81010
-
-
-	' BrightScript Debugger> ?m.bsp.liveDataFeeds["eb5fe6c6-7154-4000-ac5d-2babc51ef000"].filekeys
-	' 10SecSync_keyint50_01.mp4
-	' 10SecSync_keyint50_02.mp4
-	' 10SecSync_keyint50_03.mp4
-	' 10SecSync_keyint50_04.mp4
-	' 10SecSync_keyint50_05.mp4
-	' 10SecSync_keyint50_06.mp4
-
-
-	' BrightScript Debugger> ?m.bsp.liveDataFeeds["eb5fe6c6-7154-4000-ac5d-2babc51ef000"].articlesbytitle
-	' 10SecSync_keyint50_06.mp4: https://bsncloud.s3.amazonaws.com/Demo/113779f132efde8d6d488fa034b81010
-	' 10SecSync_keyint50_04.mp4: https://bsncloud.s3.amazonaws.com/Demo/d1503f95ccc3e7a8f400388961756877
-	' 10SecSync_keyint50_05.mp4: https://bsncloud.s3.amazonaws.com/Demo/48639565f3af999c3f543376809f8607
-	' 10SecSync_keyint50_03.mp4: https://bsncloud.s3.amazonaws.com/Demo/8d9b62391afc5149f120b314be7e0e5e
-	' 10SecSync_keyint50_02.mp4: https://bsncloud.s3.amazonaws.com/Demo/fbff3d36c031710dfc7dd4caef8cf9e8
-	' 10SecSync_keyint50_01.mp4: https://bsncloud.s3.amazonaws.com/Demo/79f0a1a4508001f309b00d99e74b6d27
-
-	'?m.bsp.liveDataFeeds["eb5fe6c6-7154-4000-ac5d-2babc51ef000"].assetpoolfiles.GetPoolFilePath("https://bsncloud.s3.amazonaws.com/Demo/79f0a1a4508001f309b00d99e74b6d27")
-
-	'filePath$ = m.assetPoolFiles.GetPoolFilePath(url)
-
-	' BrightScript Debugger> ?m.bsp.liveDataFeeds["eb5fe6c6-7154-4000-ac5d-2babc51ef000"].assetpoolfiles.GetPoolFilePath("https://bsncloud.s3.amazonaws.com/Demo/79f0a1a4508001f309b00d99e74b6d27")
-	' feedPool/6/2/nohash-fec9fc09b4fa40dc4b71e8c8db443afa36974562
-	' BrightScript Debugger> 
-
-	'stop
-
-	' m.assetPoolFiles = CreateObject("roAssetPoolFiles", m.bsp.feedPool, m.assetCollection)
-	' for each url in m.fileUrls
-	' filePath$ = m.assetPoolFiles.GetPoolFilePath(url)
-	' if filePath$ = "" then
-	' 	m.assetPoolFiles = invalid
-	' 	m.itemUrls = invalid
-	' 	m.fileKeys = invalid
-	' 	m.fileUrls = invalid
-	' 	return
-	' end if
-	' next
 End Function
