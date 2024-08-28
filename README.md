@@ -1,13 +1,13 @@
 # sync-tagged-playlist - VIDEO ONLY
 Sync video playback for tagged playlist
 
-This plugin and presentation combo will allow the user to play a specific tagged playlist in sync accross multiple Brightsign players.
+This plugin and presentation combo will allow the user to play a specific tagged playlist in sync across multiple Brightsign players.
 
 1. You will need to create a Tagged playlist using a BSN.Content account
 
 <img width="1186" alt="image" src="https://github.com/user-attachments/assets/967d9043-037e-4a2e-8fe9-22f82452eb87">
 
-2. Make a careful note for the name of the Tagged playlist that you have created in step 1 as you will need to enter that name as as User Variable later on. In my example the Tagged playlist name is "Sync-Tagged-playlist" (as per the above print screen)
+2. Make a careful note for the name of the Tagged playlist that you have created in step 1 as you will need to enter that name as User Variable later on. In my example the Tagged playlist name is "Sync-Tagged-playlist" (as per the above print screen)
 3. Download the BrightAuthor:Connected (BACon) presentation "Tag-playlist-sync-Pres.bpfx"
 4. Using the Mac/Windows BACon client set to "Local", open the "Tag-playlist-sync-Pres.bpfx" presentation
    
@@ -21,7 +21,7 @@ This plugin and presentation combo will allow the user to play a specific tagged
    
 <img width="952" alt="image" src="https://github.com/user-attachments/assets/2869c255-86e9-4b6b-86f9-4d0b226f67f7">
 
-8. Whilst signed in to your target network but with the environement still set to Local, click on the upload icon to upload the modified presentation to your network
+8. Whilst signed in to your target network but with the environment still set to Local, click on the upload icon to upload the modified presentation to your network
 
 <img width="1171" alt="image" src="https://github.com/user-attachments/assets/da47b931-ad0d-4031-bc0d-e470085d6862">
 
@@ -37,11 +37,11 @@ This plugin and presentation combo will allow the user to play a specific tagged
 
 <img width="957" alt="image" src="https://github.com/user-attachments/assets/ac1fa381-eca0-4e38-9a0e-fadb8033254b">
 
-12. Save the presentation and pubish it to a BSN.Content player group
+12. Save the presentation and publish it to a BSN.Content player group
 
 Note: 
  - Both Master and Slave(s) players should be assigned to that same group for synchronised video playback.
- - Multiple Masters/Leaders players from different sites/locations can be specified via the "master_serials" user Variable in the following format "D7E8A0001986:D7E8A0001985:D7E8A0001984" where each player serial number (1 for each master/leader) is separated by the ":" charater.
+ - Multiple Masters/Leaders players from different sites/locations can be specified via the "master_serials" user Variable in the following format "D7E8A0001986:D7E8A0001985:D7E8A0001984" where each player serial number (1 for each master/leader) is separated by the ":" character.
 
 
 
